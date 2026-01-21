@@ -4,7 +4,8 @@
 :root {
   --primary: #4A4D56;
   --secondary: #F9FAFB;
-  --text-heading: #191D1D;
+  --text-heading: #191D1D; 
+  
 }
 
 html, body {
@@ -31,4 +32,40 @@ html, body {
 
 .fs-18{
   font-size: 18px;
+} 
+
+
+
+.no-hover,
+.no-hover:hover,
+.no-hover:focus,
+.no-hover:active,
+.show > .no-hover.dropdown-toggle {
+  background-color: transparent !important;
+  color: #0A3DAF !important;     
+  border-color: #0A3DAF !important;
+  box-shadow: none !important; 
+  
+}  
+/* .button-background{
+color: #0A3DAF;
+} */
+
+.charts-background{
+  padding: 10px; 
+  border:1px solid #D9D9D9; 
+  background-color: #FCFCFC;
+}  
+
+.tab-background{
+  background-color: #EDF3FE;
+} 
+
+
+.button-background:hover{
+  background-color: #4c6eb7;
 }
+
+
+
+
