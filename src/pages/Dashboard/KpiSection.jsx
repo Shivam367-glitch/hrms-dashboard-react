@@ -1,4 +1,4 @@
-import KpiCard from "./KpiCard";
+import KpiCard from "../../components/Cards/KpiCard";
 import { useSelector } from "react-redux";
 
 const KpiSection = () => {
