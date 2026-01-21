@@ -1,6 +1,6 @@
 Project Setup (Local Development)
 
-✅ Prerequisites
+ Prerequisites
 
 1) Make sure you have the following installed:
 
