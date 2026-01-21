@@ -21,7 +21,14 @@ html, body {
 
 .custom-text-heading {
   color: var(--text-heading);  
-  letter-spacing: 4px ; 
   font-size: 1.2rem; 
 
+}
+
+.letter-spacing-4 {
+  letter-spacing: 4px;
+}
+
+.fs-18{
+  font-size: 18px;
 }

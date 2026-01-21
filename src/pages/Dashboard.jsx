@@ -1,10 +1,8 @@
-import DashboardLayout from "../layout/DashboardLayout";
-
+import KpiSection from "../components/Cards/KpiSection";
 
 const Dashboard = () => {
   return (
-    <DashboardLayout>
-    </DashboardLayout>
+      <KpiSection />
   );
 };
 
