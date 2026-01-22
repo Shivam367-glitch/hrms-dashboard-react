@@ -12,6 +12,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif !important;
+  overflow-x: auto;
 } 
 
 
@@ -47,9 +48,6 @@ html, body {
   box-shadow: none !important; 
   
 }  
-/* .button-background{
-color: #0A3DAF;
-} */
 
 .charts-background{
   padding: 10px; 
@@ -57,13 +55,39 @@ color: #0A3DAF;
   background-color: #FCFCFC;
 }  
 
+/* Tab Section */
+
+
 .tab-background{
   background-color: #EDF3FE;
 } 
 
 
+.button-background{
+color: #0A3DAF !important; 
+border: none; 
+border-radius: 6px; 
+background: none;
+}
+
+
 .button-background:hover{
-  background-color: #4c6eb7;
+  background-color: #4c6eb7 ;
+}
+
+  
+/* Employee Table Styles */
+
+
+
+
+.page-link{
+  border-radius: 8px;
+  width: 2rem;
+  height: 2rem;
+  text-align: center; 
+  color: #191D1D !important;
+  font-size: 18px;
 }
 
 

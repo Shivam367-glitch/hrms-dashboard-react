@@ -19,7 +19,7 @@ const DashboardLayout = ({ children,routes }) => {
             {currentRoute?.title || "Dashboard"}
           </h6>
         </div>
-        <div className="p-4">{children}</div>
+        <div className=" p-2 p-md-4">{children}</div>
       </div>
     </div>
   );
