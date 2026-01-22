@@ -12,7 +12,7 @@ const ChartSection = () => {
       <div className="row g-4">
         <div className="col-md-4">
           <div className="card ">
-            <p className="fw-bold fs-5 d-flex  justify-content-between charts-background">
+            <div className="fw-bold fs-5 d-flex  justify-content-between charts-background flex-wrap row-gap-2">
               Payroll by Department
               <div className="dropdown show">
                 <a
@@ -27,7 +27,7 @@ const ChartSection = () => {
                   Month
                 </a>
               </div>
-            </p>
+            </div>
             <DonutChart
               data={
                 chart.payrollByDept
@@ -38,7 +38,7 @@ const ChartSection = () => {
         </div>
         <div className="col-md-4 ">
           <div className="card ">
-            <p className="fw-bold fs-5 d-flex  justify-content-between charts-background">
+            <div className="fw-bold fs-5 d-flex  justify-content-between charts-background flex-wrap row-gap-2">
               Dept Attendance
               <div className="dropdown show">
                 <a
@@ -53,7 +53,7 @@ const ChartSection = () => {
                   UI/UX
                 </a>
               </div>
-            </p>
+            </div>
             <DonutChart
               data={chart.deptAttendance}
               title="Employpees"
@@ -63,7 +63,7 @@ const ChartSection = () => {
 
         <div className="col-md-4 ">
           <div className="card ">
-            <p className="fw-bold fs-5 d-flex  justify-content-between charts-background">
+            <div className="fw-bold fs-5 d-flex  justify-content-between charts-background flex-wrap row-gap-2">
               Pending Onboarding
               <div className="dropdown show">
                 <a
@@ -78,7 +78,7 @@ const ChartSection = () => {
                   Month
                 </a>
               </div>
-            </p>
+            </div>
 
             <BarChartComp
               data={chart.pendingOnboarding}
@@ -90,7 +90,7 @@ const ChartSection = () => {
       <div className="row g-4 mt-2">
         <div className="col-md-5 ">
           <div className="card ">
-            <p className="fw-bold fs-5 d-flex  justify-content-between charts-background ">
+            <p className="fw-bold fs-5 d-flex  justify-content-between charts-background flex-wrap row-gap-2">
               Total Payroll by Month
             </p>
 
@@ -102,7 +102,7 @@ const ChartSection = () => {
 
         <div className="col-md-7 ">
           <div className="card ">
-            <p className="fw-bold fs-5 d-flex  justify-content-between charts-background">
+            <div className="fw-bold fs-5 d-flex  justify-content-between charts-background flex-wrap row-gap-2">
               Yearly Payroll Analysis
               <div className="dropdown show">
                 <a
@@ -117,7 +117,7 @@ const ChartSection = () => {
                   Month
                 </a>
               </div>
-            </p>
+            </div>
             <YearlyPayrollChart
               className="p-3"
               data={chart.yearlyPayroll}
