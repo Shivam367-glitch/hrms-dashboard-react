@@ -1,3 +1,4 @@
+import { useMediaQuery } from "react-responsive";
 import {
   PieChart,
   Pie,
@@ -9,53 +10,57 @@ import {
 
 const DonutChart = ({ data, title }) => {
   const total = data.reduce((sum, item) => sum + item.value, 0);
-
+  const isLaptop = useMediaQuery({ maxWidth: 1300 });
   return (
-    <div style={{ width: "100%", height: 220 }}>
-      <ResponsiveContainer>
+      <ResponsiveContainer className="charts">
         <PieChart>
-          <Pie
-            data={data}
-            dataKey="value"
-            cx="45%"       
-            innerRadius={60}
-            outerRadius={80}
-          >
-            {data.map((item, index) => (
-              <Cell key={index} fill={item.color} />
-            ))}
-          </Pie>
-          <text
-            x="28%"
-            y="45%"
-            textAnchor="middle"
-            dominantBaseline="middle" 
-            className="fs-3 fw-bold"
-          >
-            {total}
-          </text>
+         <Pie
+  data={data}
+  dataKey="value"
+  innerRadius={60}
+  outerRadius={80} 
+  labelLine={false}
+  label={({ cx, cy }) => (
+    <>
+     
+      <text
+        x={cx}
+        y={cy - 10}
+        textAnchor="middle"
+        dominantBaseline="middle"
+        className="fs-3 fw-bold"
+      >
+        {total}
+      </text>
+   <text
+        x={cx}
+        y={cy + 15}
+        textAnchor="middle"
+        dominantBaseline="middle"
+         className="fs-6"
+      >
+       {title}
+      </text>
+    </>
+  )}
 
-          <text
-            x="30%"
-            y="56%"
-            textAnchor="middle"
-            dominantBaseline="middle" 
-            className="fs-6"
-        
-          >
-            {title}
-          </text>
+  
+>
+  {data.map((item, index) => (
+    <Cell key={index} fill={item.color} />
+  ))}
+</Pie>  
+
 
           <Tooltip />
-          <Legend
-            layout="vertical"
-            verticalAlign="middle"
-            align="right"
-            iconType="circle"
-          />
+            <Legend
+    layout={isLaptop ? "horizontal" : "vertical"}
+    align={isLaptop ? "center" : "right"}
+    verticalAlign={isLaptop ? "bottom" : "middle"}
+    iconType="circle"
+  />
         </PieChart>
       </ResponsiveContainer>
-    </div>
   );
 };
 

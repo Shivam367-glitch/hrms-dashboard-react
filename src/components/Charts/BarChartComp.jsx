@@ -9,7 +9,7 @@ import {
 
 const BarChartComp = ({data}) => {
   return (
-  <ResponsiveContainer width="100%" height={220}>
+  <ResponsiveContainer className="charts">
         <BarChart data={data} barSize={50}>
           <XAxis
             dataKey="label"
